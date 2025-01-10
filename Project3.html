@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Industry, Innovation, and Infrastructure</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #0066cc;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        h1 {
+            font-size: 2.5rem;
+        }
+        nav {
+            background-color: #004080;
+            overflow: hidden;
+        }
+        nav a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        nav a:hover {
+            background-color: #0059b3;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+        .card {
+            background-color: white;
+            width: 30%;
+            margin: 15px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+        }
+        .card h2 {
+            font-size: 1.5rem;
+            color: #0066cc;
+        }
+        .card p {
+            font-size: 1rem;
+            color: #555;
+        }
+        .hidden-info {
+            display: none;
+            margin-top: 10px;
+            font-size: 1rem;
+            color: #444;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+        }
+        .social-buttons {
+            margin-top: 15px;
+        }
+        .social-buttons a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: white;
+            font-size: 20px;
+        }
+        .social-share button {
+            background-color: #3b5998; /* Facebook */
+            color: white;
+            padding: 10px 15px;
+            margin: 5px;
+            border: none;
+            cursor: pointer;
+        }
+        .social-share button.twitter {
+            background-color: #55acee; /* Twitter */
+        }
+        .social-share button.instagram {
+            background-color: #e4405f; /* Instagram */
+        }
+        .social-share button.linkedin {
+            background-color: #0077b5; /* LinkedIn */
+        }
+        .partners-section, .news-section {
+            margin-top: 30px;
+            display: none;
+        }
+        .partners-section ul, .news-section ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        .partners-section li, .news-section li {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Industry, Innovation, and Infrastructure</h1>
+    <p>Explore the topics that contribute to sustainable industrialization and innovation!</p>
+</header>
+
+<nav>
+    <a href="#" onclick="showContent('home')">HOME</a>
+    <a href="#" onclick="showContent('goals')">THE 17 GOALS</a>
+    <a href="#" onclick="showContent('action')">TAKE ACTION</a>
+    <a href="#" onclick="showContent('news')">NEWS</a>
+    <a href="#" onclick="showContent('resources')">RESOURCES</a>
+    <a href="#" onclick="showContent('partners')">PARTNERS</a>
+</nav>
+
+<div class="container">
+    <div class="card" onclick="toggleInfo('info1')">
+        <h2>Promote Inclusive and Sustainable Industrialization</h2>
+        <p>Click to read more about sustainable industrialization practices.</p>
+        <div id="info1" class="hidden-info">
+            <p>Inclusive and sustainable industrialization is crucial for reducing inequalities and promoting prosperity. It involves efforts to foster economic growth while minimizing environmental impacts and ensuring all regions benefit.</p>
+        </div>
+    </div>
+
+    <div class="card" onclick="toggleInfo('info2')">
+        <h2>Foster Innovation</h2>
+        <p>Click to learn how innovation drives economic development.</p>
+        <div id="info2" class="hidden-info">
+            <p>Innovation is key to economic development. It leads to new technologies, processes, and business models that help solve current challenges and create new opportunities for growth.</p>
+        </div>
+    </div>
+
+    <div class="card" onclick="toggleInfo('info3')">
+        <h2>Build Resilient Infrastructure</h2>
+        <p>Learn about how resilient infrastructure supports communities and economies.</p>
+        <div id="info3" class="hidden-info">
+            <p>Resilient infrastructure ensures that communities are prepared for shocks, whether from climate change or natural disasters. It includes sustainable energy systems, efficient transportation networks, and robust digital infrastructure.</p>
+        </div>
+    </div>
+
+    <div class="card" onclick="toggleInfo('info4')">
+        <h2>Renewable Energy</h2>
+        <p>Discover the role of renewable energy in global sustainability.</p>
+        <div id="info4" class="hidden-info">
+            <p>Renewable energy is essential for reducing carbon emissions and addressing climate change. Solar, wind, and hydro power are key contributors to sustainable energy systems.</p>
+        </div>
+    </div>
+
+    <div class="card" onclick="toggleInfo('info5')">
+        <h2>Smart Cities</h2>
+        <p>Click to read about smart cities and their role in sustainable development.</p>
+        <div id="info5" class="hidden-info">
+            <p>Smart cities use digital technologies to improve urban infrastructure, reduce waste, and enhance the quality of life for residents. They also aim to be more environmentally friendly and resource-efficient.</p>
+        </div>
+    </div>
+
+    <div class="card" onclick="toggleInfo('info6')">
+        <h2>Tech Hubs</h2>
+        <p>Learn about the importance of tech hubs for innovation and growth.</p>
+        <div id="info6" class="hidden-info">
+            <p>Tech hubs foster innovation by bringing together entrepreneurs, startups, and technology experts. They provide an ecosystem for technological development, economic growth, and job creation.</p>
+        </div>
+    </div>
+
+    <div class="card" onclick="toggleInfo('info7')">
+        <h2>Transportation</h2>
+        <p>Click to explore sustainable transportation solutions.</p>
+        <div id="info7" class="hidden-info">
+            <p>Transportation is a critical component of infrastructure. Sustainable solutions such as electric vehicles, public transit, and bike lanes are transforming how we move people and goods.</p>
+        </div>
+    </div>
+
+    <div class="card" onclick="toggleInfo('info8')">
+        <h2>Sustainable Industries</h2>
+        <p>Discover how industries are becoming more sustainable.</p>
+        <div id="info8" class="hidden-info">
+            <p>Sustainable industries focus on minimizing their environmental impact through cleaner production methods, resource efficiency, and recycling initiatives, ensuring long-term sustainability.</p>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <p>Sign up to our newsletter and stay informed about global sustainability efforts!</p>
+    <form>
+        <input type="text" placeholder="First Name" required><br><br>
+        <input type="text" placeholder="Last Name" required><br><br>
+        <input type="email" placeholder="Email" required><br><br>
+        <button type="submit">Sign Up</button>
+    </form>
+
+    <!-- Partners Section -->
+    <div id="partners" class="partners-section">
+        <h3>Our Partners</h3>
+        <p>We seek partnerships with organizations, companies, and government entities that are committed to advancing sustainable industrialization, innovation, and resilient infrastructure. Our partners will help bring about solutions that contribute to achieving the United Nations Sustainable Development Goals (SDGs).</p>
+        <p>Potential partners may include:</p>
+        <ul>
+            <li><strong>Government Agencies:</strong> Local, regional, and international government bodies working on industrial policy, infrastructure development, and sustainability efforts.</li>
+            <li><strong>Technology Companies:</strong> Leading innovators in the tech industry, especially those focused on renewable energy, smart cities, and digital infrastructure.</li>
+            <li><strong>Non-Governmental Organizations (NGOs):</strong> NGOs that advocate for climate action, innovation, and inclusive development.</li>
+            <li><strong>Academic Institutions:</strong> Universities and research organizations conducting research on sustainable practices and technologies.</li>
+            <li><strong>Private Sector Partners:</strong> Companies across various industries that prioritize sustainability, such as renewable energy companies, construction firms, and transportation solution providers.</li>
+        </ul>
+        <p>Together with our partners, we aim to foster innovation, build resilient infrastructure, and promote inclusive industrialization that benefits all sectors of society.</p>
+    </div>
+
+    <!-- News Section -->
+    <div id="news" class="news-section">
+        <h3>2024 in Focus: 10 Things That Shaped Our World</h3>
+        <ul>
+            <li>
+                <strong>Biodiversity at the Heart of Planetary Health: A Call for Action at COP16</strong>
+                <p>Have you ever heard of Planetary Health? Imagine a world where we understood – and prioritised – the intricate connections between human wellbeing and the health of our planet. One of the most pivotal conversations occurred during COP16 where global leaders discussed the interdependence between biodiversity and human health.</p>
+            </li>
+            <li>
+                <strong>Five Ways to Make Cities More Sustainable</strong>
+                <p>The pollution we have been pumping into our shared atmosphere over the last decades presents us with an enormous challenge: we need to halve emissions within 5 years to have a chance at averting the most extreme impacts of climate change. This year, experts outlined five critical ways we can make cities more sustainable.</p>
+            </li>
+        </ul>
+    </div>
+
+    <div class="social-share">
+        <h3>Share this page:</h3>
+        <button onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(window.location.href), '_blank')" class="facebook">Share on Facebook</button>
+        <button onclick="window.open('https://twitter.com/intent/tweet?url=' + encodeURIComponent(window.location.href), '_blank')" class="twitter">Share on Twitter</button>
+        <button onclick="window.open('https://www.instagram.com/?url=' + encodeURIComponent(window.location.href), '_blank')" class="instagram">Share on Instagram</button>
+        <button onclick="window.open('https://www.linkedin.com/shareArticle?mini=true&url=' + encodeURIComponent(window.location.href), '_blank')" class="linkedin">Share on LinkedIn</button>
+    </div>
+</footer>
+
+<script>
+    function toggleInfo(infoId) {
+        var infoElement = document.getElementById(infoId);
+        if (infoElement.style.display === "none" || infoElement.style.display === "") {
+            infoElement.style.display = "block";
+        } else {
+            infoElement.style.display = "none";
+        }
+    }
+
+    function showContent(contentId) {
+        // Hide all content sections
+        var sections = document.querySelectorAll('.partners-section, .news-section, .container');
+        sections.forEach(function(section) {
+            section.style.display = 'none';
+        });
+
+        // Show the selected content
+        if (contentId === 'partners') {
+            document.getElementById('partners').style.display = 'block';
+        } else if (contentId === 'news') {
+            document.getElementById('news').style.display = 'block';
+        } else {
+            document.querySelector('.container').style.display = 'flex';
+        }
+    }
+</script>
+
+</body>
+</html>
